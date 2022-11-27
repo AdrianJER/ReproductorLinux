@@ -1,0 +1,12 @@
+' Gambas class file
+
+
+Public Sub btnCrear_Click()
+
+  If txtContra.Text == txtRepetirContra.Text Then 
+    Reproductor.Show()
+    Me.Close()
+  Else If
+    Message("Las contraseñas no coinciden")
+  Endif  
+End 

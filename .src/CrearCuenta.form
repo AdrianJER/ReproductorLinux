@@ -1,0 +1,54 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,40,74)
+  { PictureBox1 PictureBox
+    MoveScaled(11,3,18,16)
+    Picture = Picture.Load("Logo.png")
+    Stretch = True
+  }
+  { TextLabel1 TextLabel
+    MoveScaled(15,21,11,3)
+    Font = Font["+2"]
+    Text = ("Nombre")
+  }
+  { txtNombre TextBox
+    MoveScaled(8,25,24,4)
+  }
+  { TextLabel2 TextLabel
+    MoveScaled(14,30,14,3)
+    Font = Font["+2"]
+    Text = ("Apellidos")
+  }
+  { txtApellido TextBox
+    MoveScaled(8,34,24,4)
+  }
+  { txtCorreo TextBox
+    MoveScaled(8,43,24,4)
+  }
+  { TextLabel3 TextLabel
+    MoveScaled(10,39,22,3)
+    Font = Font["+2"]
+    Text = ("Correo Electronico")
+  }
+  { txtContra TextBox
+    MoveScaled(8,51,24,4)
+  }
+  { TextLabel4 TextLabel
+    MoveScaled(13,47,22,3)
+    Font = Font["+2"]
+    Text = ("Contraseña")
+  }
+  { txtRepetirContra TextBox
+    MoveScaled(8,59,24,4)
+  }
+  { TextLabel5 TextLabel
+    MoveScaled(10,55,22,3)
+    Font = Font["+2"]
+    Text = ("Repita Contraseña")
+  }
+  { btnCrear Button
+    MoveScaled(12,67,16,4)
+    Text = ("Crear cuenta")
+  }
+}

@@ -1,0 +1,33 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,80,76)
+  Background = Color.Foreground
+  Foreground = Color.ButtonForeground
+  { Barra Slider
+    MoveScaled(2,53,74,6)
+  }
+  { Slider2 Slider
+    MoveScaled(0,0,24,4)
+  }
+  { Timer1 #Timer
+    #MoveScaled(0,70)
+    Delay = 10
+  }
+  { pausa PictureBox
+    MoveScaled(12,63,7,7)
+    Background = Color.ButtonForeground
+    Mouse = Cursor.Custom
+  }
+  { play PictureBox
+    MoveScaled(23,64,6,6)
+    Background = Color.LightBackground
+  }
+  { barraVolumen Slider
+    MoveScaled(32,61,8,12)
+    Direction = Direction.LeftToRight
+    MaxValue = 10
+    Orientation = ScrollBar.Vertical
+    Value = 5
+  }
+}

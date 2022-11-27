@@ -1,0 +1,13 @@
+' Gambas class file
+
+
+Public Sub lblCrearCuenta_DblClick()
+
+  Me.Hide()
+  CrearCuenta.Show()
+
+End
+
+Public Sub btnIniciar_Click()
+  
+End

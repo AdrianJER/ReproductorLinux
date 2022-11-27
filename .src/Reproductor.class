@@ -1,0 +1,87 @@
+' Gambas class file
+
+  Private mp As New MediaPlayer
+  Private salidaVideo As MediaControl
+  Private cancion As HttpClient
+  Private archivo As Object
+  
+  Public Sub Form_Open()
+  
+  cargar()
+  
+  End 
+
+  Public Sub btn_Click()
+  
+  End
+
+  Public Sub Timer1_Timer()
+  mp.Audio.Volume = barraVolumen.Value
+    Barra.Value = CInt(mp.Position)
+  End
+ Public Sub cargar()
+  
+  Dim area As DrawingArea
+
+  
+  With area = New DrawingArea(Me)
+    .X = 10
+    .Y = 10
+    .W = 627
+    .H = 400
+  End With
+  
+  VideoControl(area)
+  
+  With mp
+    .Url = Media.URL("/home/adrian/Descargas/prueba.mp4")
+    .State = 4
+    .State = 2
+  End With
+    Barra.MaxValue = CInt(mp.Duration) 
+    Timer1.Start()
+  Wait 0.1
+  
+  salidaVideo.SetWindow(area)
+  
+  Me.Show
+  
+  With mp
+    .Play()
+    .Position = 0.00
+    Wait 0.1
+    mp.Pause()
+  End With
+  
+  End
+Public Sub VideoControl(Drar As DrawingArea)
+
+  salidaVideo = New MediaControl(mp, "ximagesink")
+  
+  mp.Video.Output = salidaVideo
+  
+  salidaVideo.SetWindow(Drar)
+End
+
+
+  Public Sub pausa_DblClick()
+    mp.Pause()
+    Timer1.Stop()
+  End
+
+Public Sub play_DblClick()
+
+  mp.Play()
+  Timer1.Start()
+
+End
+
+
+
+Public Sub Form_Close()
+
+  mp.Stop()
+  Login.Show()
+  Me.Close() 
+
+End
